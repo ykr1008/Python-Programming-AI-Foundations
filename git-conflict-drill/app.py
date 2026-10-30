@@ -3,5 +3,3 @@ def greet():
 
 
 print(greet())
-
-# This change will be reverted
