@@ -1,0 +1,5 @@
+Python strings are immutable, which means that once a string is created, its characters cannot be changed individually. For example, we cannot replace the first character of a string by assigning a new value to `text[0]`. Instead, string operations such as `replace()` create a new string.
+
+Immutability makes strings safer to use because their contents cannot unexpectedly change. It also allows Python to use strings reliably in situations such as dictionary keys and sets.
+
+However, immutability has a performance consequence when concatenating strings in a loop. Each concatenation can create a new string and copy the existing characters into it. As the string grows, repeated copying can make the operation inefficient, potentially taking quadratic time. Using `"".join()` on a collection of strings is generally more efficient when combining many pieces because it can build the final string in one operation.

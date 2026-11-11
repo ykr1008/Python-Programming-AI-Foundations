@@ -1,0 +1,15 @@
+1. What is the difference between a class attribute and an instance attribute?
+
+A class attribute is a variable defined inside a class but outside its methods, and it is shared by all instances of that class. An instance attribute belongs to a particular object and usually gets created using self inside a method such as __init__. For example, in a Student class, school_name could be a class attribute because all students attend the same school, while student_name could be an instance attribute because each student has a different name. If I change an instance attribute, it normally affects only that object, whereas changing a class attribute can affect all instances that haven't overridden it.
+
+2. When would you choose composition over inheritance?
+
+I would choose composition when a class needs to use the functionality of another class without being a specialized version of it. Inheritance represents an “is-a” relationship, while composition represents a “has-a” relationship. For example, a Car has an Engine, so I would create an Engine object inside the Car class instead of making Car inherit from Engine. Composition makes code more flexible because I can replace or modify the engine implementation without changing the inheritance hierarchy. I generally prefer composition when components need to be interchangeable or when inheritance would create unnecessary dependencies between classes.
+
+3. Is __init__ a constructor?
+
+Technically, __init__ is not the constructor itself; it is an initializer that runs after an object has been created. Python's __new__ method is responsible for creating the object, while __init__ initializes its attributes. For example, when I create a Student object, __new__ creates the instance and __init__ can assign its name and age. In everyday Python conversations, people often call __init__ a constructor because it is the method developers commonly use to initialize new objects. However, in an interview, I would explain the distinction between object creation and object initialization.
+
+4. How does Python handle the diamond problem?
+
+The diamond problem occurs in multiple inheritance when a class inherits from two classes that share the same parent. This creates ambiguity about which parent method should be called. Python handles this using the Method Resolution Order, or MRO, which determines the order in which classes are searched for methods. Python uses the C3 linearization algorithm to calculate a consistent order that respects inheritance relationships. I can inspect this order using ClassName.mro() or ClassName.__mro__. When using super(), Python follows this MRO, allowing methods to cooperate across multiple inheritance levels without simply calling a method from the immediate parent.
