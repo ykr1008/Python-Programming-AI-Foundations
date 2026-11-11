@@ -1,0 +1,14 @@
+*   [33m8ecd666[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Merge branch 'merge-demo'
+[31m|[m[32m\[m  
+[31m|[m * [33ma2ab3d3[m[33m ([m[1;32mmerge-demo[m[33m)[m Add merge branch feature
+* [32m|[m [33m897855c[m Update project on main
+[32m|[m[32m/[m  
+* [33mcb013b3[m[33m ([m[1;31morigin/main[m[33m)[m Add project starting point
+* [33m14895e9[m Revert "Add temporary comment"
+* [33m997fa3d[m Add temporary comment
+*   [33me43621f[m Resolve merge conflict in app.py
+[33m|[m[34m\[m  
+[33m|[m * [33m0934c57[m[33m ([m[1;32mfeature-a[m[33m)[m Update greeting to Hi there
+* [34m|[m [33md18cf23[m Update greeting to Good day
+[34m|[m[34m/[m  
+* [33m96441d7[m Initial commit with greet function
